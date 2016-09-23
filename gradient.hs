@@ -17,10 +17,10 @@ gradientStep (Color r1 g1 b1) (Color r2 g2 b2) step =
 
 makeGradient :: Color -> Color -> Float -> [Color]
 makeGradient begin end steps =
-  map (\n -> (gradientStep begin end (n/steps))) [1..steps]
+  map (\n -> (gradientStep begin end (n/steps))) [0..steps]
 
 c1 = (Color 68 225 130)
-c2 = (Color 218 68 49)
+c2 = (Color 10 82 216)
 
 main = do
   let listOfColors = (zip [0..] (makeGradient c1 c2 10))
